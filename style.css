@@ -1,10 +1,20 @@
 p {
-    color: violet;
+    color: rgb(0, 0, 0);
     
 }
 
 header {
-    background-color: aquamarine;
+    background-color: #e4d3ae;
     
 
+}
+
+footer {
+
+    background-color: #D46655;
+}
+
+ul {
+    background-color: #e4d3ae;
+    
 }
