@@ -1,3 +1,10 @@
+.container {
+    border: 4px solid #e4d3ae;
+    width: 200px; height: 200px;
+    border-style: outset;
+    
+}
+
 p {
     color: rgb(0, 0, 0);
     
@@ -5,16 +12,31 @@ p {
 
 header {
     background-color: #e4d3ae;
-    
-
+    padding: 20px;
+    margin: -10px;
 }
 
 footer {
-
-    background-color: #D46655;
+    background-color: #cf4833;
+    padding: 20px;
+    margin: -10px;
 }
 
 ul {
-    background-color: #e4d3ae;
+    background-color: #e4d3aebe;
+    padding: 0px;
+    margin: 50px;
+    border-style: groove;
     
+}
+
+body {
+    background-color: #fafaee; 
+    background-image: url(Assets/istockphoto-1293996796-612x612.jpg);
+}
+
+
+h3 {
+    margin: 30px;
+    padding: auto;
 }
