@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
 
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
 
 .container {
     border: 4px solid rgb(213, 221, 228);
@@ -25,15 +29,15 @@ p {
 }
 
 header {
-    background-color: #e4d3ae;
-    padding: 20px;
-    margin: -10px;
+    background-color: rgb(255, 208, 0);
+    height: 400px;
+    margin-bottom: 25px;
+
 }
 
 footer {
     background-color: #cf4833;
-    padding: 20px;
-    margin: -10px;
+    height: 400px;
 }
 
 ul {
@@ -45,8 +49,8 @@ ul {
 }
 
 body {
-    background-color: #fafaee; 
-    background-image: url(Assets/istockphoto-1293996796-612x612.jpg);
+    background-color: #ffffff; 
+    
 }
 
 
@@ -69,4 +73,15 @@ table {
     padding: 10px;
     border-radius: 20px;
     font-size: 20px;
+ }
+
+ .pasta {
+    width: 600px; 
+    height: 400px;
+    float: right;
+ }
+
+ .cambiarPaginas {
+    background-color: #cf4833;
+    height: 100px;
  }

@@ -1,0 +1,45 @@
+div {
+    margin: 0px auto;
+}
+
+#pancho-arriba {
+    height: 100px;
+    width: 600px;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 50px;
+    background-color: rgb(223, 163, 91);
+    border-bottom: 10px solid rgb(189, 123, 44);
+}
+
+#panchito {
+    background-color: brown;
+    height: 100px;
+    width: 700px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    
+}
+
+#pancho-abajo {
+    height: 100px;
+    width: 600px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 200px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 200px;
+    background-color: rgb(223, 163, 91);
+    border-top: 10px solid rgb(189, 123, 44);
+}
+
+.parrilla {
+    height: 100px;
+    width: 20px;
+    background-color: rgb(122, 31, 31);
+    border-radius: 10em / 40em;
+    margin-left: 111px;
+    
+}
