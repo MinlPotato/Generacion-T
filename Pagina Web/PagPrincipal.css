@@ -44,13 +44,6 @@ nav {
     padding: 2% 6%;
     justify-content: space-between;
     align-items: center;
-
-}
-
-nav p {
-    color: white;
-    padding: 0px 20px;
-    font-size: 50px
 }
 
 .nav-links {
@@ -67,8 +60,15 @@ nav p {
 
 }
 
-.nav-links ul li a {
+.nav-links ul li a{
     color: white;
+    font-style: none;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links ul li p {
+    color: #b33e2c;
     font-style: none;
     text-decoration: none;
     font-size: 20px;
@@ -103,6 +103,7 @@ nav p {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px ;
     box-shadow: 10px 10px 15px rgba(7, 7, 7, 0.5);
+    
 
 }
 
@@ -139,11 +140,16 @@ nav p {
 }
 
 .div-Recetas ul li img {
+    display: flex;
     height: 200px !important;
     width: 200px !important;
     border-radius: 20px;
     box-shadow: 0px 10px 15px gray;
-    
+    transition-duration: 1s;
+}
+
+.div-Recetas ul li img:hover {
+    -webkit-transform: scale(1.1); transform: scale(1.1);
 }
 
 .Main a {
