@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2, p, input {
+    color: rgb(0, 172, 0);
+}
+
+h1 {
+    color: rgb(159, 255, 151);
+}
+
+html {
+    text-align: center;
+    
+}
+
+body {
+    background-image: url(codigo.gif);
+    background-position: center;
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+    align-items: center;
+    
+}
+
+h2 {
+    margin: 50px;
+    
+}
+
+.container {
+    background-color: rgb(0, 0, 0);
+    
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 10px 10px  rgba(1, 102, 23, 0.801);
+
+}
+
+input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
