@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+      <p><input type="text" name="name" id="name" placeholder="Ingrese Nombre" onchange="cambio(this)"></p>
+      <p><input type="text" name="apellido" id="apellido" placeholder="Ingrese Apellido" onchange="cambio(this)"></p>
+      <p><input type="text" name="email" id="email" placeholder="Ingrese Email" onchange="cambio(this)"></p>
+        
+      <p> <input type="radio" name="sex" value="femenino" id="femenino" onchange="gender(this)">
+      <label for="femenino">Femenino</label>
+    
+     <input type="radio" name="sex" value="masculino" id="masculino" onchange="gender(this)">
+      <label for="masculino">Masculino</label>
+    </p>
+    <p> <input type="radio" name="sex" value="noBinario" id="noBinario" onchange="gender(this)">
+      <label for="noBinario">No Binario</label>
+    
+     <input type="radio" name="sex" value="noDecirlo" id="noDecirlo" onchange="gender(this)">
+      <label for="noDecirlo">Prefiero No Decirlo</label>
+    </p>
+
+    <select name="select" id="age" onchange="cambio(this)">
+        <option value="--">--</option>
+        <option value="-18">-18</option>
+        <option value="19-30">19-30</option>
+        <option value="31-45">31-45</option>
+        <option value="46-55">46-55</option>
+        <option value="56+">56+</option>
+    </select>
+    <label for="select">Edad</label>
+
+   <p><input type="checkbox" name="esArgentino" id="esArgentino">
+    <label for="esArgentino" >Es Argentino?</label>
+</p>
+
+
+    </form>
+
+    <script src="Form.js"></script>
+</body>
+</html>
