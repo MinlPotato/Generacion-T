@@ -1,0 +1,30 @@
+.cards {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.App {
+  background-color: rgb(255, 255, 255);
+  color: rgb(86, 67, 16);
+}
+
+.login {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+.login div {
+  width: 700px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  margin-top: 150px;
+  margin-bottom: 50px;
+}

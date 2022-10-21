@@ -1,0 +1,17 @@
+li p{
+    font-size: 20px;
+}
+
+li {
+    text-align: left;
+}
+
+.flex {
+    display: flex;
+    gap: 20px;
+}
+
+.titulo {
+    font-style: italic;
+    
+}

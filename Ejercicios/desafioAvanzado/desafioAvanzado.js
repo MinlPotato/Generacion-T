@@ -95,6 +95,7 @@ function start() {
     document.getElementById("reset").innerHTML = "Nuevos Colores";
     RandomColors = [];
     document.getElementById("message").innerHTML = "";
+    document.getElementById("message").style.color = "black"
     h1.style.color = "black";
   randomColor();
   generateRandomColors();
