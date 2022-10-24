@@ -3,17 +3,17 @@ import "./Equipos.css";
 
 function Equipos() {
   const listadoEquipos = [
-    { equipo: "Argentina", wins: 5, loses: 1 },
-    { equipo: "Brasil", wins: 2, loses: 3 },
-    { equipo: "Peru", wins: 6, loses: 0 },
-    { equipo: "Colombia", wins: 0, loses: 3 },
-    { equipo: "Uruguay", wins: 2, loses: 5 },
+    { equipo: "Argentina", wins: "5", loses: "1" },
+    { equipo: "Brasil", wins: "2", loses: "3" },
+    { equipo: "Peru", wins: '6', loses: '0' },
+    { equipo: "Colombia", wins: '0', loses: '3' },
+    { equipo: "Uruguay", wins: '2', loses: '5' },
   ];
 
   const equipos = ["Argentina", "Brasil", "Peru", "Colombia", "Uruguay"];
 
   const listItems = listadoEquipos.map((equipo) => (
-    <li>
+    <li >
       {" "}
       {equipo.equipo}
       <div className="flex">
