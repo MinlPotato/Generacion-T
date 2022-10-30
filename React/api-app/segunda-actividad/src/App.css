@@ -42,3 +42,8 @@
     flex-wrap: wrap;
     justify-content:space-evenly;
 }
+
+.nasa div {
+  min-width: 500px;
+  
+}

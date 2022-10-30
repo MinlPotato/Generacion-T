@@ -1,0 +1,25 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+
+
+.thing {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.test {
+    background: linear-gradient(to right, rgb(0, 102, 255), rgb(255, 251, 0));
+    background-clip: text;
+    -webkit-background-clip: text;
+    height: 75px;
+    -webkit-text-fill-color: transparent;
+}

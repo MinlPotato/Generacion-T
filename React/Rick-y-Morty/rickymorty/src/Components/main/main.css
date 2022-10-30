@@ -1,0 +1,15 @@
+.titulo {
+    margin-bottom: 20px;
+}
+
+.info {
+    margin-top: 50px;
+}
+
+.test {
+    background: linear-gradient(to right, rgb(0, 102, 255), rgb(255, 251, 0));
+    background-clip: text;
+    -webkit-background-clip: text;
+    height: 75px;
+    -webkit-text-fill-color: transparent;
+}
