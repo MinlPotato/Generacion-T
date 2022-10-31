@@ -6,13 +6,15 @@ import "./Personajes.css";
 import Footer from "../Footer/Footer";
 import InfoPersonaje from "../InfoPersonaje/InfoPersonaje";
 
-function Personajes() {
-  const [characters, setData] = useState([]);
+const AllPersonajes = async (state) => {
+  const llamada = await axios.get("https://rickandmortyapi.com/api/character");
+  state(llamada.data.results);
+};
 
+const Personajes = () => {
+  const [characters, setData] = useState(null);
   useEffect(() => {
-    axios.get("https://rickandmortyapi.com/api/character").then((response) => {
-      setData(response.data.results);
-    });
+    AllPersonajes(setData);
   }, []);
   console.log(characters);
 
@@ -22,7 +24,7 @@ function Personajes() {
 
       {/* <div className="b-example-divider"></div> */}
 
-      <div className="px-4 pt-1 my-3 text-center border-bottom">
+      <div className="px-4 pt-1 my-3 text-center">
         <div className="test">
           <h3 className="display-4 fw-bold text-center thing text-white test">
             Personajes
@@ -35,20 +37,32 @@ function Personajes() {
             Morty, sabras sus nombres, cuantos episodios estuvieron y si estan
             vivos o muertos.
           </p>
+          <p className="lead mb-4 text-center">
+           <strong>Apreta en la Imagen </strong>  del personaje para ver mas informacion.
+          </p>
         </div>
 
         <div className="flex">
-          {characters.map((character) => (
-            <div key={character.id}>
-              <Card info={character} />
+          {characters != null ? (
+            characters
+              .filter((character, idx) => idx < 20)
+              .map((character, index) => (
+                <div key={character.id}>
+                  <Card info={character} />
+                </div>
+              ))
+          ) : (
+            <div className="spinner-border" role="status">
+              <span className="visually-hidden">Loading...</span>
             </div>
-          ))}
+          )}
         </div>
+        
       </div>
 
       <Footer />
     </>
   );
-}
+};
 
 export default Personajes;

@@ -9,6 +9,8 @@ function Card(props) {
 
   let alive = "";
 
+console.log(id);
+
   if (status === "Alive") {
     alive = "🟢";
   } else if (status === "unknown") {
@@ -23,9 +25,11 @@ function Card(props) {
 
   return (
     <div className="shadow animation" style={{ width: "320px" }}>
-      <Link to="/Personajes/Info" onClick={GetId(id)}>
-        <img src={image} className="card-img-top"></img>
-      </Link>
+     <a href={`/Personajes/Info/ ${id}`}>
+      <img src={image} className="card-img-top"></img>
+     </a>
+        
+      
 
       <div className="card-body bg-black bg-opacity-25">
         <h5 className="card-title text-center p-1"> {name} </h5>

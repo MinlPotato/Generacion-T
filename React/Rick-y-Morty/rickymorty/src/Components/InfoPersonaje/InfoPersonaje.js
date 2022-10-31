@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import axios from "axios";
@@ -6,32 +7,41 @@ import { ThemeContext } from "../Cards/Card";
 import InfoCard from "../InfoCard/InfoCard";
 import './InfoPersonaje.css'
 
-function InfoPersonaje(props) {
+function InfoPersonaje() {
+  const params = useParams()
+  console.log(params.id);
+
   const [characters, setData] = useState([]);
-  const [num, setNum] = useState(1);
-  const url = "https://rickandmortyapi.com/api/character/" + num;
+  const [num, setNum] = useState(params.id);
+  const url = `https://rickandmortyapi.com/api/character/${num}` ;
 
   useEffect(() => {
     axios.get(url).then((response) => {
       setData(response.data);
     });
   }, [num]);
-  console.log();
+
 
   function NextChar() {
+   
     if (num >= 20) {
       setNum(num);
     } else {
-      setNum(num + 1);
+      
+      setNum( +num +  1);
+      
     }
+   
   }
 
   function LastChar() {
+    
     if (num <= 1) {
       setNum(num);
     } else {
-      setNum(num - 1);
+      setNum(num -  1);
     }
+    
   }
 
   return (
