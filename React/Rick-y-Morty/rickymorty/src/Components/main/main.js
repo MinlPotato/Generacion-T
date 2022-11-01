@@ -23,7 +23,7 @@ function main() {
           <img
             src={img2}
             className="img-fluid rounded-3 shadow-lg mb-4"
-            alt="Example image"
+            alt="img"
             width="700"
             height="500"
             loading="lazy"

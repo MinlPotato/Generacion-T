@@ -7,7 +7,7 @@ function Episodios(props) {
     axios.get(props.info).then((response) => {
       setData(response.data);
     });
-  }, []);
+  }, [props.info]);
 
   return <div> {episodio.name} </div>;
 }

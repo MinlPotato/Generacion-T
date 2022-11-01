@@ -1,10 +1,8 @@
 import React from "react";
 import "./Card.css";
-import { Link } from "react-router-dom";
-import InfoPersonaje from "../InfoPersonaje/InfoPersonaje";
 
 function Card(props) {
-  const { id, name, species, status, gender, image, origin, episode, url } =
+  const { id, name, species, status, gender, image, origin, episode } =
     props.info;
 
   let alive = "";
@@ -19,14 +17,12 @@ console.log(id);
     alive = "🔴";
   }
 
-  function GetId(id) {
-    <InfoPersonaje info={id} />;
-  }
+  
 
   return (
     <div className="shadow animation" style={{ width: "320px" }}>
      <a href={`/Personajes/Info/ ${id}`}>
-      <img src={image} className="card-img-top"></img>
+      <img src={image} className="card-img-top" alt="img"></img>
      </a>
         
       

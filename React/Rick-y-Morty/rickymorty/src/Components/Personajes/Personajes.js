@@ -4,7 +4,6 @@ import axios from "axios";
 import Card from "../Cards/Card";
 import "./Personajes.css";
 import Footer from "../Footer/Footer";
-import InfoPersonaje from "../InfoPersonaje/InfoPersonaje";
 
 const AllPersonajes = async (state) => {
   const llamada = await axios.get("https://rickandmortyapi.com/api/character");

@@ -18,7 +18,7 @@ function Header(props) {
               <svg className="bi me-2" width="40" height="32" src={img}></svg>
               <span className="fs-4">
                 {" "}
-                <img src={img} height="auto" width="120"></img>{" "}
+                <img src={img} alt='img' height="auto" width="120"></img>{" "}
               </span>
             </a>
 

@@ -1,13 +1,12 @@
-import { useEffect, useState } from "react";
+
 import "./InfoCard.css";
-import axios from "axios";
+
 import Episodios from "../Episodios/Episodios";
 
 function InfoCard(props) {
   const { image, name, status, species, origin, location, episode } =
     props.info;
 
-  console.log(origin);
 
   let alive = "";
 
@@ -55,7 +54,7 @@ function InfoCard(props) {
         <div className="col-sm bg-secondary bg-opacity-50 shadow-lg rounded-top">
           {" "}
           <div className="">
-            <img className="rounded shadow-sm my-3" src={image}></img>
+            <img className="rounded shadow-sm my-3" alt="img" src={image} ></img>
           </div>
           <h4> {name} </h4>{" "}
           <h5>
@@ -67,7 +66,7 @@ function InfoCard(props) {
       <div className="row gap-1">
         <div className="col-sm-8 bg-secondary bg-opacity-25 rounded-bottom text-start py-3">
           <div className="bg-opacity-50 border-bottom border-secondary">
-            <h4 className="pt-4">Episodios donde aparecio {name} </h4>
+            <h4 className="pt-4">Episodios donde apareció {name} </h4>
           </div>
 
           {episode != null ? (

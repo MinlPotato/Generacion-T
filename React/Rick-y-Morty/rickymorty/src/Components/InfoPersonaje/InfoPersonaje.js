@@ -3,45 +3,43 @@ import { useParams } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import axios from "axios";
-import { ThemeContext } from "../Cards/Card";
 import InfoCard from "../InfoCard/InfoCard";
-import './InfoPersonaje.css'
+import "./InfoPersonaje.css";
 
 function InfoPersonaje() {
-  const params = useParams()
+  const params = useParams();
   console.log(params.id);
 
   const [characters, setData] = useState([]);
   const [num, setNum] = useState(params.id);
-  const url = `https://rickandmortyapi.com/api/character/${num}` ;
+  const url = `https://rickandmortyapi.com/api/character/${num}`;
 
   useEffect(() => {
     axios.get(url).then((response) => {
       setData(response.data);
+
+      window.history.replaceState(
+        null,
+        "Rick y Morty WIKI",
+        `/Personajes/Info/${num}`
+      );
     });
   }, [num]);
 
-
   function NextChar() {
-   
     if (num >= 20) {
       setNum(num);
     } else {
-      
-      setNum( +num +  1);
-      
+      setNum(+num + 1);
     }
-   
   }
 
   function LastChar() {
-    
     if (num <= 1) {
       setNum(num);
     } else {
-      setNum(num -  1);
+      setNum(num - 1);
     }
-    
   }
 
   return (
@@ -49,8 +47,12 @@ function InfoPersonaje() {
       <Header active="nav-link active" notActive="nav-link" />
 
       {/* <div className="b-example-divider"></div> */}
-
-      <div className="container d-flex px-4 pt-4 my-5">
+      <div className="container mt-3 pt-4 px-5 mb-2">
+        <a href="/Personajes/" className="text-secondary">
+          Volver a la lista de Personajes
+        </a>
+      </div>
+      <div className="container d-flex px-4  mb-5">
         <div
           className="btn-group flex-fill align-items-center justify-content-around align-self-center text-center align-middle text-white"
           role="group"
@@ -63,6 +65,7 @@ function InfoPersonaje() {
           >
             Anterior
           </button>
+
           <div
             className="flex-grow-1 text-secondary text-white"
             style={{ width: "200px" }}
@@ -80,7 +83,9 @@ function InfoPersonaje() {
         </div>
       </div>
 
-      <InfoCard info={characters} />
+      <div key={characters.id}>
+        <InfoCard info={characters} />
+      </div>
 
       <Footer />
     </>
