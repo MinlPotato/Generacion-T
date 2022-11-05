@@ -54,7 +54,7 @@ function InfoCard(props) {
         <div className="col-sm bg-secondary bg-opacity-50 shadow-lg rounded-top">
           {" "}
           <div className="">
-            <img className="rounded shadow-sm my-3" alt="img" src={image} ></img>
+            <img className="rounded shadow-sm my-3" alt="img" src={image}></img>
           </div>
           <h4> {name} </h4>{" "}
           <h5>
@@ -65,26 +65,28 @@ function InfoCard(props) {
       </div>
       <div className="row gap-1">
         <div className="col-sm-8 bg-secondary bg-opacity-25 rounded-bottom text-start py-3">
-          <div className="bg-opacity-50 border-bottom border-secondary">
+          <div className="bg-opacity-50 border-bottom border-secondary ">
             <h4 className="pt-4">Episodios donde apareció {name} </h4>
           </div>
 
-          {episode != null ? (
-            episode
-              .filter((epi, idx) => idx < 100)
-              .map((epi, index) => (
-                <ul className="list-group list-group-flush" id={epi.id}>
-                  <li className="list-group-item bg-secondary bg-opacity-25 text-white">
-                    {" "}
-                    <Episodios info={epi} />{" "}
-                  </li>
-                </ul>
-              ))
-          ) : (
-            <div className="spinner-border" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
-          )}
+          <div className="">
+            {episode != null ? (
+              episode
+                .filter((epi, idx) => idx < 100)
+                .map((epi, index) => (
+                  <ul className="list-group list-group-flush" id={epi.id}>
+                    <li className="list-group-item bg-secondary bg-opacity-25 text-white">
+                      {" "}
+                      <Episodios info={epi} />{" "}
+                    </li>
+                  </ul>
+                ))
+            ) : (
+              <div className="spinner-border" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="col-sm bg-secondary bg-opacity-25 shadow-lg rounded-bottom text-start py-3 h-25 mh-50">

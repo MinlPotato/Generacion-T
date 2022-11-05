@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.banner {
+    
+    z-index: -1;
+    height: 300px;
+    position: relative;
+    translate: 0px -30px;
+    background-image: linear-gradient(rgba(45, 45, 45, 0.535), rgba(42, 42, 42, 0.518)), url(ContactoImg.jpg) ;
+    background-position: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 60px;
+}

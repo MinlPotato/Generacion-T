@@ -7,7 +7,7 @@ function Card(props) {
 
   let alive = "";
 
-console.log(id);
+  console.log(id);
 
   if (status === "Alive") {
     alive = "🟢";
@@ -17,15 +17,11 @@ console.log(id);
     alive = "🔴";
   }
 
-  
-
   return (
     <div className="shadow animation" style={{ width: "320px" }}>
-     <a href={`/Personajes/Info/ ${id}`}>
-      <img src={image} className="card-img-top" alt="img"></img>
-     </a>
-        
-      
+      <a href={`/Personajes/Info/ ${id}`}>
+        <img src={image} className="card-img-top" alt="img"></img>
+      </a>
 
       <div className="card-body bg-black bg-opacity-25">
         <h5 className="card-title text-center p-1"> {name} </h5>
