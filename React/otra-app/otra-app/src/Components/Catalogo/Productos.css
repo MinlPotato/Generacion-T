@@ -1,0 +1,6 @@
+.scroll {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+   background-color: rgba(214, 214, 214, 0.384);
+   border-radius: 10px;
+}

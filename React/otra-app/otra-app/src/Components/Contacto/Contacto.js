@@ -11,7 +11,7 @@ function Contacto() {
         <h1 className="text-center text-white"> Contáctanos!</h1>
       </div>
 
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center mb-5">
         <Form />
       </div>
     </>

@@ -8,12 +8,12 @@ function Card(props) {
 
   return (
     <>
-      <div className="shadow" style={{ width: "320px" }}>
+      <div className="shadow" style={{ width: "200px" }}>
         <a href={`/Catalogo/${id}`}>
           <img src={image} className="card-img-top"></img>
         </a>
 
-        <div className="card-body bg-black bg-opacity-25">
+        {/* <div className="card-body bg-black bg-opacity-25">
           <h5 className="card-title text-center p-1"> {name} </h5>
           <p className="card-text p-2">{status}</p>
         </div>
@@ -23,7 +23,7 @@ function Card(props) {
             <p className="card-text text-white"> Origin: {origin.name} </p>
             <p className="card-text text-white">Episodes: {episodes}</p>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </>
   );

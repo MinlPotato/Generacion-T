@@ -30,7 +30,6 @@ function FormComp() {
       setInfo(data);
       // alert(JSON.stringify(values, null, 2));
     },
-   
   });
 
   return (
@@ -103,10 +102,16 @@ function FormComp() {
         </Form>
       ) : (
         <div>
-          <h1> Email: {info.email}</h1>
-          <h1> First Name: {info.firstName}</h1>
-          <h1> Last Name: {info.lastName}</h1>
-          <h1> Check: {info.check}</h1>
+          <h2 className="text-center">Mensaje Enviado con Exito!</h2>
+          <div className="card">
+            <div className="card-body">
+              <p> Email: {info.email}</p>
+              <p> First Name: {info.firstName}</p>
+              <p> Last Name: {info.lastName}</p>
+              <p> Comentario: {info.comentario}</p>
+              <p> Check: {info.check}</p>
+            </div>
+          </div>
         </div>
       )}
     </>

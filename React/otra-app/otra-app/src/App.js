@@ -7,6 +7,7 @@ import Home from "./Components/Home/Home";
 import Catalogo from "./Components/Catalogo/Catalogo";
 import Contacto from "./Components/Contacto/Contacto";
 import Producto from "./Components/Producto/Producto";
+import Footer from "./Components/Footer/Footer";
 import "animate.css";
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
           <Route path="/Contacto" element={<Contacto />}></Route>
           <Route path="/Catalogo/:id" element={<Producto />}></Route>
         </Routes>
+
+        <Footer/>
       </BrowserRouter>
 
       {/* <div className='d-flex justify-content-center m-5'>
