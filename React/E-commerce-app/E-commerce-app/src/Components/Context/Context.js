@@ -10,6 +10,7 @@ function GlobalState(props) {
   const [cartState, dispatch] = useReducer(shoppingreducer, { cart: [] });
 
   function addProductToCart(product) {
+    
     dispatch({ type: TYPES.ADD_TO_CART, product: product });
   }
 

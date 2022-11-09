@@ -1,28 +1,21 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Card from "../Card/Card";
 import axios from "axios";
 import ProductoCard from "../Card/ProductoCard";
+import {productos} from '../Assets/Productosjson'
 
 function Producto() {
   const params = useParams();
 
-  const url = `https://rickandmortyapi.com/api/character/${params.id}`
-  const [producto, setProducto] = useState(null)
+  const [Productos, setProductos] = useState(productos)
 
-  useEffect(() => {
-    axios.get(url).then((response) => {
-      setProducto(response.data);
-
-    });
-  }, []);
-
-
+  const fruta = Productos.find((x) => x.id === params)
+   console.log(fruta);
     return (
       <>
         <div> {params.id} </div>
-        {producto != null ? (
-          <ProductoCard info={producto} />
+        {Productos != null ? (
+          <ProductoCard info={fruta} />
         ) : (
           <div className="spinner-border" role="status">
             <span className="visually-hidden">Loading...</span>

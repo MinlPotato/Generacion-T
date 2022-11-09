@@ -1,22 +1,26 @@
-import { useState } from "react";
+
 import { TYPES } from "../Actions/ShoppingActions";
 import { productos } from "../Assets/Productosjson";
 
 export const shoppingcartInitialState = {
   products: productos,
-  cart: [],
-};
+  cart: []
+}
 
 console.log(shoppingcartInitialState);
 
 //Funcion pura
 export function shoppingreducer(state, action) {
   switch (action.type) {
+    
     case TYPES.ADD_TO_CART: {
       let newItem = productos.find((x) => x.id === action.product.id);
 
       //reviso en mi carrito si ya no tengo ese item
       let itemCart = state.cart.find((x) => x.id === action.product.id);
+     
+      console.log(itemCart);
+      // newItem.id === 
 
       return itemCart
         ? {
@@ -43,7 +47,7 @@ export function shoppingreducer(state, action) {
     }
 
     case TYPES.REMOVE_ONE_FROM_CART: {
-      let itemDelete = productos.find((x) => x.id === action.productId);
+      let itemDelete = productos.find(x => x.id === action.productId);
 
       return itemDelete.quantity > 1
         ? {

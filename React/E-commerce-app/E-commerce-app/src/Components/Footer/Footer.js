@@ -15,7 +15,7 @@ function Footer() {
               </svg>
             </a>
             <span className="mb-3 mb-md-0 text-muted">
-              &copy; 2022 Rick y Morty WIKI, Inc
+              &copy; FruitInstant, Inc
             </span>
           </div>
 

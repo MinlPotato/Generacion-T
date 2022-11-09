@@ -10,11 +10,12 @@ import Producto from "./Components/Producto/Producto";
 import Footer from "./Components/Footer/Footer";
 import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
 import "animate.css";
-
+import GlobalState from "./Components/Context/Context";
 
 function App() {
   return (
-    <>
+    <GlobalState>
+       <>
       <BrowserRouter>
         <Header />
 
@@ -34,6 +35,8 @@ function App() {
         <Form/>
       </div> */}
     </>
+    </GlobalState>
+   
   );
 }
 

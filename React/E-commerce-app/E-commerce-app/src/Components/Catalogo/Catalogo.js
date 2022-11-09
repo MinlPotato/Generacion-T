@@ -13,7 +13,7 @@ function Catalogo() {
 
   return (
     <>
-      <h1 className="text-center m-5"> Catalogo </h1>
+      <h1 className="text-center m-5 font"> Catalogo </h1>
       <div className="container">
         <h2 className="my-3"> Productos Principales </h2>
 
@@ -25,22 +25,7 @@ function Catalogo() {
         <Productos />
       </div>
 
-      <div className="container">
-        <h2 className="mb-3 mt-5"> Productos Burger </h2>
-        {frutas.map((p) => {
-          return (
-            <div id={p.id}>
-              <img
-                src={p.image}
-                style={{ width: "200px", height: "200px" }}
-                className="img"
-              ></img>
-              <p>{p.name}</p>
-              {/* <button onClick={() => addToCart(p.id)}>AÑADIR A CARRITO</button> */}
-            </div>
-          );
-        })}
-      </div>
+     
     </>
   );
 }

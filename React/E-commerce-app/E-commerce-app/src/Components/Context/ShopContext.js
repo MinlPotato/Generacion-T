@@ -5,6 +5,6 @@ export default React.createContext({
   products: productos,
   cart: [],
 
-  addProductToCart: (product) => {},
-  removeProductFromCart: (productId) => {},
+  addProductToCart: product => {},
+  removeProductFromCart: productId => {},
 });
