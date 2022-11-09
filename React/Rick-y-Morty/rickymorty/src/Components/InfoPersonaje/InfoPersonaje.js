@@ -27,7 +27,7 @@ function InfoPersonaje() {
   }, [num]);
 
   function NextChar() {
-    if (num >= 20) {
+    if (num >= 1000) {
       setNum(num);
     } else {
       setNum(+num + 1);

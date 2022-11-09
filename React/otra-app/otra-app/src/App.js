@@ -8,7 +8,9 @@ import Catalogo from "./Components/Catalogo/Catalogo";
 import Contacto from "./Components/Contacto/Contacto";
 import Producto from "./Components/Producto/Producto";
 import Footer from "./Components/Footer/Footer";
+import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
 import "animate.css";
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
           <Route path="/Catalogo" element={<Catalogo />}></Route>
           <Route path="/Contacto" element={<Contacto />}></Route>
           <Route path="/Catalogo/:id" element={<Producto />}></Route>
+          <Route path="/Carrito" element={<ShoppingCart/>}></Route>
         </Routes>
 
         <Footer/>

@@ -6,6 +6,7 @@ function NavBar() {
     { name: "Home", href: "/Home" },
     { name: "Catalogo", href: "/Catalogo" },
     { name: "Contacto", href: "/Contacto" },
+    { name: "Carrito", href: "/Carrito" },
   ];
 
   return navigation.map((item) => (
