@@ -8,8 +8,9 @@ export const AllProductos = async (state) => {
   state(llamada.data.results);
 };
 
-export function CantButtons() {
-  const [price, setPrice] = useState(50);
+export function CantButtons(props) {
+  
+  const [price, setPrice] = useState(props.precio * 25);
   console.log();
   const [radioValue, setRadioValue] = useState("1");
 

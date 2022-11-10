@@ -3,7 +3,9 @@ import Producto from "../Producto/Producto";
 import "./Card.css";
 import ShopContext from "../Context/ShopContext";
 import Button from "react-bootstrap/Button";
-import { Card } from "react-bootstrap";
+import { Card} from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+
 
 function Cards() {
   return (
@@ -16,12 +18,12 @@ function Cards() {
                 return (
                   <Card>
                     <div className="shadow" style={{ width: "200px" }}>
-                      <a href={`/Catalogo/${p.id}`}>
+                      <NavLink to={`/Catalogo/${p.id}`}>
                         <img
                           src={p.image}
                           className="card-img-top rounded unzoom"
                         ></img>
-                      </a>{" "}
+                      </NavLink>{" "}
                       <Card.Body>
                         <p className="text-center"> {p.name} </p>
                         <Button

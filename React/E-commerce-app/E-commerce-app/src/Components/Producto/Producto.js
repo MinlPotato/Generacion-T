@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, NavLink, Link } from "react-router-dom";
 import axios from "axios";
 import ProductoCard from "../Card/ProductoCard";
 import { productos } from "../Assets/Productosjson";
 import ShopContext from "../Context/ShopContext";
+import Breadcrumb from "react-bootstrap/Breadcrumb";
 
 function Producto() {
   const { id } = useParams();
@@ -24,12 +25,24 @@ function Producto() {
   return (
     <>
       {Producto != null ? (
-       
-        
+        <>
+          <div className="container mb-2 card">
+            <Breadcrumb>
+              
+                <Breadcrumb.Item>
+                <NavLink to="/Catalogo">
+                Catalogo
+                </NavLink>
+                </Breadcrumb.Item>
+              
+
+              <Breadcrumb.Item active> {Producto.name} </Breadcrumb.Item>
+            </Breadcrumb>
+          </div>
           <div className="d-flex justify-content-center card container">
             <ProductoCard info={Producto} />
           </div>
-       
+        </>
       ) : (
         <div className="spinner-border" role="status">
           <span className="visually-hidden">Loading...</span>

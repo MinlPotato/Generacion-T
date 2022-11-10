@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../NavBar/NavBar";
 import { NavLink } from "react-router-dom";
 import FixedHeader from "./FixedHeader";
+import logo from "../Assets/FruitInstant-logo.png"
 
 function NormalHeader() {
   return (
@@ -14,7 +15,10 @@ function NormalHeader() {
           >
             <img src=""></img>
           </a>
-
+          <NavLink to="/">
+            <img src={logo} className="mx-3" style={{ width: "50px" }}></img> 
+          </NavLink>
+         
           <ul className="nav nav-pills col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small text-white">
               <NavBar />

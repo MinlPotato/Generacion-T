@@ -25,7 +25,7 @@ function App() {
           <Route path="/Home" element={<Home />}></Route>
           <Route path="/Catalogo" element={<Catalogo />}></Route>
           <Route path="/Contacto" element={<Contacto />}></Route>
-          <Route path="/Catalogo/:id" element={<Producto />}></Route>
+          <Route exact path="/Catalogo/:id" element={<Producto />}></Route>
           <Route path="/Carrito" element={<ShoppingCart/>}></Route>
         </Routes>
 

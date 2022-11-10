@@ -36,7 +36,7 @@ function ShoppingCart() {
         <h1 className="text-center mb-5 font">Carrito</h1>
         <div
           className="container card p-3 d-flex justify-content-center flex-column"
-          style={{ minHeight: "400px" }}
+          style={{ minHeight: "600px" }}
         >
           <div className="d-flex gap-3 justify-content-center flex-wrap">
             <h3>No hay ningun producto en su carrito :(</h3>

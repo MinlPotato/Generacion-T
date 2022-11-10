@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 function CarritoButton() {
   return (
     <>
-      <a href="/Carrito">
+      <NavLink to="/Carrito">
         <div className="d-flex justify-content-end mx-5">
           <div className="carritoButton">
             <img
@@ -21,7 +21,7 @@ function CarritoButton() {
             ></img>
           </div>
         </div>
-      </a>
+      </NavLink>
     </>
   );
 }

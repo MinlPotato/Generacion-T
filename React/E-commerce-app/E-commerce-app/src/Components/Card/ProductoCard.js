@@ -1,12 +1,13 @@
 import React from "react";
 import { Form, Button, Card } from "react-bootstrap";
 import { CantButtons } from "../Functions/Functions";
-
+import ShopContext from "../Context/ShopContext";
 import "./Card.css";
+import ModalCarrito from '../Modal/Modal'
 
 function ProductoCard(props) {
   console.log(props);
-  const { image, name, precio, desc } = props.info;
+  const { image, name, precio, desc, id } = props.info;
 
   return (
     <>
@@ -34,15 +35,32 @@ function ProductoCard(props) {
               <Card.Body className="w-100">
                 <h4 className="text-start">Cantidad</h4>
                 <div className="d-flex gap-2 justify-content-between">
-                 <CantButtons/>
+                  <CantButtons precio={precio} />
                 </div>
               </Card.Body>
 
               <Card.Body className="d-flex gap-1 flex-column align-items-center w-100 justify-content-center">
-                <Button className="w-100">Comprar Ahora</Button>
-                <Button className="w-100" variant="outline-primary">
-                  Agregar al Carrito
-                </Button>
+                <ShopContext.Consumer>
+                  {(value) => (
+                    <>
+                      <Button
+                        className="w-100"
+                        onClick={() =>  value.addProductToCart(props.info)}
+                        to="/Carrito"
+                      >
+                        Comprar Ahora
+                      </Button>
+
+                      <Button
+                        className="w-100"
+                        variant="outline-primary"
+                        onClick={() => value.addProductToCart(props.info)}
+                      >
+                        Agregar al Carrito
+                      </Button>
+                    </>
+                  )}
+                </ShopContext.Consumer>
               </Card.Body>
             </Card>
           </div>
@@ -50,12 +68,12 @@ function ProductoCard(props) {
         <div className="row">
           <div className="col-sm ">
             <div className="align-items-start text-start">
-              <h2 className="pt-3">Descripcion</h2>
+              <h2 className="pt-3">Descripción</h2>
               <p className="text-muted"> {desc} </p>
             </div>
           </div>
 
-          <div className="col-sm">col-sm</div>
+          <div className="col-sm"></div>
         </div>
       </div>
     </>
