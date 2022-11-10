@@ -5,7 +5,7 @@ function FixedHeader(props) {
 
   return (
     <>
-      <header className="p-3 text-bg-dark show-animation fixed-top shadow mb-4">
+      <header className="p-3  show-animation fixed-top shadow mb-4 colorHeader">
         <div className="container">
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a

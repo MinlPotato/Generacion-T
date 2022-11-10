@@ -12,13 +12,14 @@ import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
 import "animate.css";
 import GlobalState from "./Components/Context/Context";
 
+
 function App() {
   return (
     <GlobalState>
        <>
       <BrowserRouter>
         <Header />
-
+        
         <Routes>
           <Route path="/" element={<Navigate to="/Home" />}></Route>
           <Route path="/Home" element={<Home />}></Route>

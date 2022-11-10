@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./NavBar.css"
 
 function NavBar() {
   const navigation = [
@@ -18,7 +19,7 @@ function NavBar() {
         className={({ isActive }) => {
           return (
             " nav-link text-decoration-none text-center  " +
-            (isActive ? "disabled active" : "text-white")
+            (isActive ? "disabled active bg-warning" : "text-white")
           );
         }}
       >

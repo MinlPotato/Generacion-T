@@ -5,7 +5,7 @@ import FixedHeader from "./FixedHeader";
 
 function NormalHeader() {
   return (
-    <header className="p-3 text-bg-dark  shadow mb-4">
+    <header className="p-3 colorHeader shadow mb-4">
       <div className="container">
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a

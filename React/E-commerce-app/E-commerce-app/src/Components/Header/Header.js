@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import "./Header.css";
 import FixedHeader from "./FixedHeader";
 import NormalHeader from "./NormalHeader";
+import CarritoButton from "./CarritoButton";
 
 function Header() {
   const [fix, setFix] = useState(false);
@@ -17,15 +18,17 @@ function Header() {
   }
 
   window.addEventListener("scroll", SetFixed);
-
+  
   return fix == false ? (
     //home, contacto, catalogo
     <>
       <NormalHeader />
+      <CarritoButton />
     </>
   ) : (
     <>
       <NormalHeader />
+      <CarritoButton />
       <FixedHeader isActive={fix} />
     </>
   );

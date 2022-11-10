@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-
 import ShopContext from "../Context/ShopContext";
+import sadFruitImage from "../Assets/sad-fruit.png";
 
 function ShoppingCart() {
   const context = useContext(ShopContext);
@@ -10,9 +10,6 @@ function ShoppingCart() {
     <>
       <h1 className="text-center font">Carrito</h1>
       <div className="container card p-3">
-        
-
-        
         <div className="d-flex gap-3 justify-content-center flex-wrap">
           {context.cart.map((p) => {
             return (
@@ -37,13 +34,23 @@ function ShoppingCart() {
     <>
       <div className="">
         <h1 className="text-center mb-5 font">Carrito</h1>
-        <div className="container card p-3" style={{ minHeight: "400px" }}>
-          
+        <div
+          className="container card p-3 d-flex justify-content-center flex-column"
+          style={{ minHeight: "400px" }}
+        >
           <div className="d-flex gap-3 justify-content-center flex-wrap">
-            <h3>No hay ningun producto en su carrito</h3>
-           
-          </div> 
-          <img src="" alt="sad-image"></img>
+            <h3>No hay ningun producto en su carrito :(</h3>
+          </div>
+          <img
+            src={sadFruitImage}
+            style={{
+              display: "block",
+              marginLeft: "auto",
+              marginRight: "auto",
+              width: "30%",
+            }}
+            alt="sad-image"
+          ></img>
         </div>
       </div>
     </>

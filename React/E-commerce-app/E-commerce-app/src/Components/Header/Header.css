@@ -26,3 +26,20 @@
         display: none;
     }
 }
+
+.carritoButton {
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    border-radius: 100%;
+    box-shadow: -5px -5px 10px rgb(181, 118, 0) inset, 0px 0px 10px 3px rgba(248, 161, 0, 0.182);
+    position: fixed;
+    z-index: 1;
+    
+}
+
+.colorHeader {
+    background: linear-gradient(rgb(0, 158, 206), rgb(0, 167, 218), rgb(0, 118, 154))  ;
+    
+   
+}

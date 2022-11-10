@@ -12,7 +12,7 @@ import './Productos.css'
 
    return (
      <>
-       <div className="scroll d-flex flex-start gap-4 flex-nowrap p-4">
+       
          {productoss != null ? (
            productoss.map((producto) => (
              <div key={producto.id}>
@@ -24,7 +24,7 @@ import './Productos.css'
              <span className="visually-hidden">Loading...</span>
            </div>
          )}
-       </div>
+      
      </>
    );
  };
