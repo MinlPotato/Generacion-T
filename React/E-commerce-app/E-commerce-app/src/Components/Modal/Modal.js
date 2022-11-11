@@ -36,4 +36,4 @@ function ModalCarrito() {
   );
 }
 
-export default CarritoButton
+export default ModalCarrito

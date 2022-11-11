@@ -19,7 +19,10 @@ export function shoppingreducer(state, action) {
       //reviso en mi carrito si ya no tengo ese item
       let itemCart = state.cart.find((x) => x.id === action.product.id);
      
-      console.log(itemCart);
+      console.log(state.cart);
+      // console.log(action.product.id);
+      // console.log(state);
+      // console.log(itemCart);
       // newItem.id === 
 
       return itemCart

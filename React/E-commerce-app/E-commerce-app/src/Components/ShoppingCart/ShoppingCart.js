@@ -4,7 +4,7 @@ import sadFruitImage from "../Assets/sad-fruit.png";
 
 function ShoppingCart() {
   const context = useContext(ShopContext);
-  console.log(context);
+  console.log(context.cart);
 
   return context.cart.length >= 1 ? (
     <>
