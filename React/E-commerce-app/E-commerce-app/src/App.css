@@ -3,3 +3,12 @@
 .font {
     font-family: 'Pacifico', cursive;
 }
+
+.gradient1 {
+    background: linear-gradient(45deg,#239FE9,#44D5F3);
+}
+
+.gradient2 {
+    background: linear-gradient(45deg,#dbfdec2a,#ffc2d42a);
+   
+}

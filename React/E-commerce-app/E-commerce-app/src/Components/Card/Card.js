@@ -17,7 +17,7 @@ function Cards() {
               {context.products.map((p) => {
                 return (
                   <Card>
-                    <div className="shadow" style={{ width: "200px" }}>
+                    <div className="shadow " style={{ width: "200px" }}>
                       <NavLink to={`/Catalogo/${p.id}`}>
                         <img
                           src={p.image}

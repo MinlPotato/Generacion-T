@@ -25,7 +25,7 @@ export function CantButtons(props) {
 
   return (
     <>
-      <div className="d-flex gap-2 justify-content-between">
+      <div className="d-flex gap-2 justify-content-between align-items-center">
         {radios.map((radio, idx) => (
           <ToggleButton
             key={idx}
@@ -45,7 +45,7 @@ export function CantButtons(props) {
           </ToggleButton>
         ))}
 
-        <p>$ {price} </p>
+        <h5 className="mb-0 text-muted">$ {price} </h5>
       </div>
     </>
   );

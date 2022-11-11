@@ -9,16 +9,17 @@ function ShoppingCart() {
   return context.cart.length >= 1 ? (
     <>
       <h1 className="text-center font">Carrito</h1>
-      <div className="container card p-3">
+      <div className="container card p-3" style={{ minHeight: "600px" }}>
         <div className="d-flex gap-3 justify-content-center flex-wrap">
           {context.cart.map((p) => {
             return (
               <div className="card">
                 <img src={p.newItem.image} style={{ width: "200px" }}></img>
-                <div className="card-body">
+                <div className="card-body text-center">
                   <p>{p.newItem.name}</p>
                   <p>Cantidad : {p.quantity}</p>
                   <button
+                    className="btn btn-outline-danger"
                     onClick={() => context.removeProductFromCart(p.newItem.id)}
                   >
                     Eliminar
@@ -39,7 +40,7 @@ function ShoppingCart() {
           style={{ minHeight: "600px" }}
         >
           <div className="d-flex gap-3 justify-content-center flex-wrap">
-            <h3>No hay ningun producto en su carrito :(</h3>
+            <h3>No hay ningun producto en tu carrito :(</h3>
           </div>
           <img
             src={sadFruitImage}

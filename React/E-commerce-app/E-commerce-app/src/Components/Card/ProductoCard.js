@@ -14,7 +14,7 @@ function ProductoCard(props) {
       <div className="text-center container mx-5  py-4">
         <div className="row">
           <div className="col-sm-7 ">
-            <div className="align-items-center border">
+            <div className="align-items-center border-bottom">
               <img
                 className="img-fluid zoom"
                 style={{ width: "500px" }}

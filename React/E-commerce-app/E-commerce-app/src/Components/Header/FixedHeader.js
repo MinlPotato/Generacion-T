@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
 import NavBar from "../NavBar/NavBar";
+import { NavLink } from "react-router-dom";
+import logo from '../Assets/FruitInstant-logo.png'
 
 function FixedHeader(props) {
-
   return (
     <>
-      <header className="p-3  show-animation fixed-top shadow mb-4 colorHeader">
+      <header className="p-3 show-animation fixed-top shadow mb-4 colorHeader">
         <div className="container">
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a
@@ -14,7 +15,9 @@ function FixedHeader(props) {
             >
               <img src=""></img>
             </a>
-
+            <NavLink to="/">
+              <img src={logo} className="mx-3" style={{ width: "50px" }}></img>
+            </NavLink>
             <ul className="nav nav-pills col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <li className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small text-white">
                 <NavBar />
@@ -42,4 +45,4 @@ function FixedHeader(props) {
   );
 }
 
-export default FixedHeader
+export default FixedHeader;
