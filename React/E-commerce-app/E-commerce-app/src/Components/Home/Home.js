@@ -10,20 +10,23 @@ function Home() {
   return (
     <>
       <div className="background"></div>
-      <h1 className="text-center animate__animated animate__zoomIn mx-5 position-absolute top-50 start-0 translate-middle font textMove">
-        Bienvenidos a <span className="fontColor">FruitInstant</span>
-        <img className="mt-2" src={logo} style={{ width: "300px" }}></img>{" "}
-        <NavLink to="/Catalogo">
-          <Button className="theButton mt-5" variant="outline-secondary">
-            Catalogo
-          </Button>
-        </NavLink>
-      </h1>
-
+      <div className=" textMove position-absolute top-50 start-0 translate-middle d-flex flex-column">
+        <h1 style={{fontSize: "62px"}} className="text-center animate__animated animate__zoomIn mx-5 font">
+          {" "}
+          Bienvenidos a <span className="fontColor">FruitInstant</span>
+        </h1>
+        <img className="mt-2" src={logo} style={{ width: "300px", marginLeft: "auto", marginRight:"auto" }}></img>{" "}
+         <NavLink className="theButton" to="/Catalogo">
+        <Button className="theButton mt-5" variant="outline-secondary">
+          Catalogo
+        </Button>
+      </NavLink>
+      </div>
+      
+     
       {/* <div className="d-flex justify-content-center">
         <Carousel />
       </div>  */}
-
       <div className="otherBackground d-flex justify-content-center ">
         <div className="column container text-center">
           <div className="col  font text-white">

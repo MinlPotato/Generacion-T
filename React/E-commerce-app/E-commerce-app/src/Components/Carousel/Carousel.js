@@ -5,7 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 
 function CarouselHome() {
   return (
-    <Carousel className="d-flex justify-content-center w-75 shadow">
+    <Carousel className="d-flex justify-content-center w-100 shadow">
       <Carousel.Item>
         <img className="d-block w-100" src={banner} alt="First slide" />
         <Carousel.Caption>
