@@ -7,37 +7,39 @@ import Home from "./Components/Home/Home";
 import Catalogo from "./Components/Catalogo/Catalogo";
 import Contacto from "./Components/Contacto/Contacto";
 import Producto from "./Components/Producto/Producto";
+import CheckOutPage from "./Components/CheckOut/CheckOutPage";
 import Footer from "./Components/Footer/Footer";
 import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
 import "animate.css";
-import GlobalState from "./Components/Context/Context";
+import GlobalState from "./Components/ContextT/GlobalState";
+
 
 
 function App() {
   return (
     <GlobalState>
-       <>
-      <BrowserRouter>
-        <Header />
-        
-        <Routes>
-          <Route path="/" element={<Navigate to="/Home" />}></Route>
-          <Route path="/Home" element={<Home />}></Route>
-          <Route path="/Catalogo" element={<Catalogo />}></Route>
-          <Route path="/Contacto" element={<Contacto />}></Route>
-          <Route exact path="/Catalogo/:id" element={<Producto />}></Route>
-          <Route path="/Carrito" element={<ShoppingCart/>}></Route>
-        </Routes>
+      <>
+        <BrowserRouter>
+          <Header />
 
-        <Footer/>
-      </BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Navigate to="/Home" />}></Route>
+            <Route path="/Home" element={<Home />}></Route>
+            <Route path="/Catalogo" element={<Catalogo />}></Route>
+            <Route path="/Contacto" element={<Contacto />}></Route>
+            <Route exact path="/Catalogo/:id" element={<Producto />}></Route>
+            <Route path="/Carrito" element={<ShoppingCart />}></Route>
+            <Route path="/Carrito/ChekOut" element={<CheckOutPage />}></Route>
+          </Routes>
 
-      {/* <div className='d-flex justify-content-center m-5'>
+          <Footer />
+        </BrowserRouter>
+
+        {/* <div className='d-flex justify-content-center m-5'>
         <Form/>
       </div> */}
-    </>
+      </>
     </GlobalState>
-   
   );
 }
 

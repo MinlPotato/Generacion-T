@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
-import ShopContext from "../Context/ShopContext";
+import ShopContext from "../ContextT/ShopContext";
 
 function CarritoButton() {
   const context = useContext(ShopContext);

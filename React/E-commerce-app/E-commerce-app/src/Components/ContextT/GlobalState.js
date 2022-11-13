@@ -1,7 +1,7 @@
 import React, { useState, useReducer } from "react";
 import ShopContext from "./ShopContext";
 import { shopReducer, ADD_PRODUCT, REMOVE_PRODUCT } from "./reducers";
-import productos from "../Assets/Productosjson";
+import {productos} from "../Assets/Productosjson";
 
 
 function GlobalState(props) {

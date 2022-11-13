@@ -18,7 +18,7 @@ function Catalogo() {
       <h1 className="text-center m-5 font"> Catalogo </h1>
       <div className="container">
         <h2 className="my-3 font"> Productos Principales </h2>
-        <div className="scroll d-flex flex-start gap-4 justify-content-around flex-nowrap p-4">
+        <div style={{overflow: "auto"}} className="d-flex flex-start gap-2 justify-content-evenly flex-wrap p-4">
           <Cards />
         </div>
         <div className="gap-2 mt-5">

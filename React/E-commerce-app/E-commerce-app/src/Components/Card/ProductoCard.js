@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Card, ToggleButton } from "react-bootstrap";
-import ShopContext from "../Context/ShopContext";
+import ShopContext from "../ContextT/ShopContext";
 import "./Card.css";
 import ModalCarrito from "../Modal/Modal";
 import { NavLink } from "react-router-dom";
 
 function ProductoCard(props) {
-  const { image, name, precio, desc, id } = props.info;
- 
+  let { image, name, precio, desc, id, precioTotal } = props.info;
+  
 
   const [price, setPrice] = useState(precio * 25);
   const [radioValue, setRadioValue] = useState("1");
@@ -19,6 +19,12 @@ function ProductoCard(props) {
     { cantidad: 100, value: "4" },
     { cantidad: 200, value: "5" },
   ];
+
+  useEffect(() => {
+    precioTotal = price
+    console.log(precioTotal);
+  }, [price])
+  
 
   return (
     <>
@@ -84,7 +90,9 @@ function ProductoCard(props) {
                       <Button
                         className="w-100"
                         variant="outline-primary"
-                        onClick={() => value.addProductToCart(props.info)}
+                        onClick={() =>
+                          value.addProductToCart(props.info)
+                        }
                       >
                         Agregar al Carrito
                       </Button>

@@ -1,38 +1,55 @@
-import React, { useContext } from "react";
-import ShopContext from "../Context/ShopContext";
+import React, { useContext, useEffect } from "react";
+import ShopContext from "../ContextT/ShopContext";
 import sadFruitImage from "../Assets/sad-fruit.png";
 import { Button } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 function ShoppingCart() {
   const context = useContext(ShopContext);
   console.log(context.cart);
+
+    useEffect(() => {
+      console.log(context);
+    }, []);
 
   return context.cart.length >= 1 ? (
     <>
       <h1 className="text-center font">Carrito</h1>
       <div className="container card p-5" style={{ minHeight: "700px" }}>
         <div className="d-flex gap-3 justify-content-center flex-wrap">
-          {context.cart.map((p) => {
-            return (
-              <div className="card">
-                <img src={p.newItem.image} style={{ width: "200px" }}></img>
-                <div className="card-body text-center">
-                  <p>{p.newItem.name}</p>
-                  <p>Cantidad: {p.quantity}</p>
-                  <p>Precio: ${p.newItem.precio} </p>
-                  <button
-                    className="btn btn-outline-danger"
-                    onClick={() => context.removeProductFromCart(p.newItem.id)}
-                  >
-                    Eliminar
-                  </button>
-                </div>
+          {context.cart.map((cartItem) => (
+            <div key={cartItem.id} className="card">
+              <NavLink to={`/Catalogo/${cartItem.id}`}>
+                <img
+                  className="unzoom border-bottom"
+                  src={cartItem.image}
+                  style={{ width: "200px" }}
+                ></img>
+              </NavLink>
+
+              <div className="card-body border-bottom ">
+                <p>{cartItem.name}</p>
+                <p>Cantidad: {cartItem.quantity}</p>
+                <p className="m-0">Precio: ${cartItem.precio} </p>
               </div>
-            );
-          })}
+              <div className="card-body text-center">
+                <button
+                  className="btn btn-outline-danger"
+                  onClick={context.removeProductFromCart.bind(
+                    this,
+                    cartItem.id
+                  )}
+                >
+                  Eliminar
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
-        <div className="d-flex flex-row-reverse" style={{marginTop: "170px"}}>
-          <Button className="">Pagar</Button>
+        <div className="d-flex flex-row-reverse" style={{ marginTop: "170px" }}>
+          <NavLink to="/Carrito/ChekOut">
+            <Button className="">Pagar</Button>
+          </NavLink>
         </div>
       </div>
     </>

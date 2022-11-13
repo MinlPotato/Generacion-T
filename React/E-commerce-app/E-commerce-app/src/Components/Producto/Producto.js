@@ -3,7 +3,7 @@ import { useParams, NavLink, Link } from "react-router-dom";
 import axios from "axios";
 import ProductoCard from "../Card/ProductoCard";
 import { productos } from "../Assets/Productosjson";
-import ShopContext from "../Context/ShopContext";
+import ShopContext from "../ContextT/ShopContext";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 
 function Producto() {

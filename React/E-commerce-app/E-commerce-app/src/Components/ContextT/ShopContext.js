@@ -1,5 +1,5 @@
 import React from "react";
-import productos from "../Assets/Productosjson";
+import {productos} from "../Assets/Productosjson";
 
 export default React.createContext({
   products: productos,

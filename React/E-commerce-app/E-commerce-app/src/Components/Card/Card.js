@@ -1,9 +1,10 @@
 import React from "react";
 import "./Card.css";
-import ShopContext from "../Context/ShopContext";
+import ShopContext from "../ContextT/ShopContext";
 import Button from "react-bootstrap/Button";
 import { Card } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import noImage from "../Assets/no-image.png";
 
 function Cards() {
   return (
@@ -14,14 +15,22 @@ function Cards() {
             {context.products.map((p) => {
               return (
                 <Card>
-                  <div className="shadow " style={{ width: "200px" }}>
-                    <NavLink to={`/Catalogo/${p.id}`}>
+                  <div className="shadow" style={{ width: "200px" }}>
+                    {p.image == null ? (
                       <img
-                        src={p.image}
-                        className="card-img-top rounded unzoom"
+                        src={noImage}
+                        className="card-img-top rounded"
                       ></img>
-                    </NavLink>{" "}
-                    <Card.Body>
+                    ) : (
+                      <NavLink to={`/Catalogo/${p.id}`}>
+                        <img
+                          src={p.image}
+                          className="card-img-top rounded unzoom"
+                        ></img>
+                      </NavLink>
+                    )}
+
+                    {/* <Card.Body>
                       <p className="text-center"> {p.name} </p>
                       <Button
                         onClick={() => context.addProductToCart(p)}
@@ -29,7 +38,7 @@ function Cards() {
                       >
                         AÑADIR AL CARRITO
                       </Button>
-                    </Card.Body>
+                    </Card.Body> */}
                   </div>
                 </Card>
               );
