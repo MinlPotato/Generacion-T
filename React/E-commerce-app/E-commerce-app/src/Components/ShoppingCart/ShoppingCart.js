@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import ShopContext from "../Context/ShopContext";
 import sadFruitImage from "../Assets/sad-fruit.png";
+import { Button } from "react-bootstrap";
 
 function ShoppingCart() {
   const context = useContext(ShopContext);
@@ -9,7 +10,7 @@ function ShoppingCart() {
   return context.cart.length >= 1 ? (
     <>
       <h1 className="text-center font">Carrito</h1>
-      <div className="container card p-3" style={{ minHeight: "600px" }}>
+      <div className="container card p-5" style={{ minHeight: "700px" }}>
         <div className="d-flex gap-3 justify-content-center flex-wrap">
           {context.cart.map((p) => {
             return (
@@ -17,7 +18,8 @@ function ShoppingCart() {
                 <img src={p.newItem.image} style={{ width: "200px" }}></img>
                 <div className="card-body text-center">
                   <p>{p.newItem.name}</p>
-                  <p>Cantidad : {p.quantity}</p>
+                  <p>Cantidad: {p.quantity}</p>
+                  <p>Precio: ${p.newItem.precio} </p>
                   <button
                     className="btn btn-outline-danger"
                     onClick={() => context.removeProductFromCart(p.newItem.id)}
@@ -28,6 +30,9 @@ function ShoppingCart() {
               </div>
             );
           })}
+        </div>
+        <div className="d-flex flex-row-reverse" style={{marginTop: "170px"}}>
+          <Button className="">Pagar</Button>
         </div>
       </div>
     </>

@@ -1,13 +1,24 @@
-import React from "react";
-import { Form, Button, Card } from "react-bootstrap";
-import { CantButtons } from "../Functions/Functions";
+import React, { useState } from "react";
+import { Button, Card, ToggleButton } from "react-bootstrap";
 import ShopContext from "../Context/ShopContext";
 import "./Card.css";
-import ModalCarrito from '../Modal/Modal'
+import ModalCarrito from "../Modal/Modal";
+import { NavLink } from "react-router-dom";
 
 function ProductoCard(props) {
-  console.log(props);
   const { image, name, precio, desc, id } = props.info;
+ 
+
+  const [price, setPrice] = useState(precio * 25);
+  const [radioValue, setRadioValue] = useState("1");
+
+  const radios = [
+    { cantidad: 25, value: "1" },
+    { cantidad: 50, value: "2" },
+    { cantidad: 75, value: "3" },
+    { cantidad: 100, value: "4" },
+    { cantidad: 200, value: "5" },
+  ];
 
   return (
     <>
@@ -34,8 +45,26 @@ function ProductoCard(props) {
 
               <Card.Body className="w-100">
                 <h4 className="text-start">Cantidad</h4>
-                <div className="d-flex gap-2 justify-content-between">
-                  <CantButtons precio={precio} />
+                <div className="d-flex gap-2 justify-content-between align-items-center">
+                  {radios.map((radio, idx) => (
+                    <ToggleButton
+                      key={idx}
+                      id={`radio-${idx}`}
+                      type="radio"
+                      variant="outline-primary"
+                      name={radio.cantidad}
+                      value={radio.value}
+                      checked={radioValue === radio.value}
+                      onChange={(e) => {
+                        setRadioValue(e.currentTarget.value);
+                        setPrice(e.currentTarget.name * precio);
+                      }}
+                    >
+                      {radio.cantidad}
+                    </ToggleButton>
+                  ))}
+
+                  <h5 className="mb-0 text-muted">$ {price} </h5>
                 </div>
               </Card.Body>
 
@@ -43,13 +72,14 @@ function ProductoCard(props) {
                 <ShopContext.Consumer>
                   {(value) => (
                     <>
-                      <Button
-                        className="w-100"
-                        onClick={() =>  value.addProductToCart(props.info)}
-                        to="/Carrito"
-                      >
-                        Comprar Ahora
-                      </Button>
+                      <NavLink className="w-100" to="/Carrito">
+                        <Button
+                          className="w-100"
+                          onClick={() => value.addProductToCart(props.info)}
+                        >
+                          Comprar Ahora
+                        </Button>
+                      </NavLink>
 
                       <Button
                         className="w-100"

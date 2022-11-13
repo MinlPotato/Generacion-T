@@ -7,7 +7,7 @@ import logo from "../Assets/FruitInstant-logo.png"
 function NormalHeader() {
   return (
     <header className="p-3 colorHeader shadow mb-4">
-      <div className="container">
+      <div className="container headerMargin">
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a
             href="/"
@@ -16,9 +16,9 @@ function NormalHeader() {
             <img src=""></img>
           </a>
           <NavLink to="/">
-            <img src={logo} className="mx-3" style={{ width: "50px" }}></img> 
+            <img src={logo} className="mx-3" style={{ width: "50px" }}></img>
           </NavLink>
-         
+
           <ul className="nav nav-pills col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small text-white">
               <NavBar />
