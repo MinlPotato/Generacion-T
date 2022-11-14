@@ -23,15 +23,11 @@ function CarritoButton() {
               }}
             ></img>
             {context.cart.length != 0 ? (
-              <div className="carritoNumber d-flex justify-content-center">
+              <div className="d-flex justify-content-center">
                 {" "}
                 <p
-                  className="text-center"
+                  className="text-center carritoNumber"
                   style={{
-                    marginLeft: "auto",
-                    marginRight: "3px",
-                    marginTop: "-2px",
-
                     color: "white",
                   }}
                 >
