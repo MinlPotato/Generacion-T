@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Button, Card, ToggleButton } from "react-bootstrap";
 import ShopContext from "../ContextT/ShopContext";
 import "./Card.css";
-import ModalCarrito from "../Modal/Modal";
+// import ModalCarrito from "../Modal/Modal";
 import { NavLink } from "react-router-dom";
 
 function ProductoCard(props) {
-  let { image, name, precio, desc, id, precioTotal } = props.info;
+  let { image, name, precio, desc } = props.info;
   
 
   const [price, setPrice] = useState(precio * 25);
@@ -20,10 +20,10 @@ function ProductoCard(props) {
     { cantidad: 200, value: "5" },
   ];
 
-  useEffect(() => {
-    precioTotal = price
-    console.log(precioTotal);
-  }, [price])
+  // useEffect(() => {
+  //   precioTotal = price
+  //   console.log(precioTotal);
+  // }, [price])
   
 
   return (
@@ -34,6 +34,7 @@ function ProductoCard(props) {
             <div className="align-items-center border-bottom">
               <img
                 className="img-fluid zoom"
+                alt="img"
                 style={{ width: "500px" }}
                 src={image}
               ></img>

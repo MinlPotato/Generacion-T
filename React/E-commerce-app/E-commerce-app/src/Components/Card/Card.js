@@ -1,7 +1,6 @@
 import React from "react";
 import "./Card.css";
 import ShopContext from "../ContextT/ShopContext";
-import Button from "react-bootstrap/Button";
 import { Card } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import noImage from "../Assets/no-image.png";
@@ -19,12 +18,14 @@ function Cards() {
                     {p.image == null ? (
                       <img
                         src={noImage}
+                        alt="img"
                         className="card-img-top rounded"
                       ></img>
                     ) : (
                       <NavLink to={`/Catalogo/${p.id}`}>
                         <img
                           src={p.image}
+                          alt="img"
                           className="card-img-top rounded unzoom"
                         ></img>
                       </NavLink>
