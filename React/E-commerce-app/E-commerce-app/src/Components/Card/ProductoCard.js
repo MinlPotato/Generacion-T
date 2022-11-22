@@ -6,8 +6,7 @@ import "./Card.css";
 import { NavLink } from "react-router-dom";
 
 function ProductoCard(props) {
-  let { image, name, precio, desc } = props.info;
-  
+  let { id, image, name, precio, desc } = props.info;
 
   const [price, setPrice] = useState(precio * 25);
   const [radioValue, setRadioValue] = useState("1");
@@ -20,12 +19,17 @@ function ProductoCard(props) {
     { cantidad: 200, value: "5" },
   ];
 
-  // useEffect(() => {
-  //   precioTotal = price
-  //   console.log(precioTotal);
-  // }, [price])
-  
+  let prodcutoInfo = {
+    id: id,
+    image: image,
+    name: name,
+    precio: precio,
+    desc: desc,
+    cantidad: price / precio,
+  };
 
+  console.log(prodcutoInfo);
+  console.log(props.info);
   return (
     <>
       <div className="text-center container mx-5  py-4">
@@ -82,7 +86,7 @@ function ProductoCard(props) {
                       <NavLink className="w-100" to="/Carrito">
                         <Button
                           className="w-100"
-                          onClick={() => value.addProductToCart(props.info)}
+                          onClick={() => value.addProductToCart(prodcutoInfo)}
                         >
                           Comprar Ahora
                         </Button>
@@ -91,9 +95,7 @@ function ProductoCard(props) {
                       <Button
                         className="w-100"
                         variant="outline-primary"
-                        onClick={() =>
-                          value.addProductToCart(props.info)
-                        }
+                        onClick={() => value.addProductToCart(prodcutoInfo)}
                       >
                         Agregar al Carrito
                       </Button>

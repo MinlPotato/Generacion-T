@@ -31,9 +31,9 @@ function CarritoButton() {
                     color: "white",
                   }}
                 >
-                  {" "}
+                  
                   {context.cart.length}
-                </p>{" "}
+                </p>
               </div>
             ) : (
               <></>

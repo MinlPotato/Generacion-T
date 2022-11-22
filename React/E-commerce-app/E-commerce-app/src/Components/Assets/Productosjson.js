@@ -72,20 +72,5 @@ export const productos = [
     precioTotal: 0,
     desc: "",
   },
-  {
-    id: "9",
-    name: "",
-    image: null,
-    precio: 0,
-    precioTotal: 0,
-    desc: "",
-  },
-  {
-    id: "10",
-    name: "",
-    image: null,
-    precio: 0,
-    precioTotal: 0,
-    desc: "",
-  },
+
 ];

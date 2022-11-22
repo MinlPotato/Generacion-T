@@ -30,7 +30,7 @@ function ShoppingCart() {
               <div className="card-body border-bottom ">
                 <p>{cartItem.name}</p>
                 <p>Cantidad: {cartItem.quantity}</p>
-                <p className="m-0">Precio: ${cartItem.precio} </p>
+                <p className="m-0">Precio: ${cartItem.precio * cartItem.quantity} </p>
               </div>
               <div className="card-body text-center">
                 <button

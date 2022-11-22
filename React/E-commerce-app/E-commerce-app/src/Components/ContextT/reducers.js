@@ -9,12 +9,16 @@ const addProductToCart = (product, state) => {
   );
 
   if (updatedItemIndex < 0) {
-    updatedCart.push({ ...product, quantity: 1 , precioTotal: product.precioTotal});
+    updatedCart.push({
+      ...product,
+      quantity: product.cantidad,
+      precioTotal: product.precio,
+    });
   } else {
     const updatedItem = {
       ...updatedCart[updatedItemIndex],
     };
-    updatedItem.quantity++;
+    updatedItem.quantity += product.cantidad;
     updatedCart[updatedItemIndex] = updatedItem;
   }
 

@@ -40,33 +40,33 @@ function FormComp() {
             <div className="d-flex gap-5">
               <div>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Email address</Form.Label>
+                  <Form.Label>Email</Form.Label>
                   <Form.Control
                     type="email"
                     name="email"
-                    placeholder="Enter email"
+                    placeholder="Escribe tu email"
                     onChange={formik.handleChange}
                   />
                   <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
+                    No vamos a compartir tu email con nadie.
                   </Form.Text>
                 </Form.Group>
 
                 <Form.Group className="mb-4" controlId="formBasicFirstName">
-                  <Form.Label>First Name</Form.Label>
+                  <Form.Label>Nombre</Form.Label>
                   <Form.Control
                     type="text"
                     name="firstName"
-                    placeholder="Enter first name"
+                    placeholder="Ecribe tu nombre"
                     onChange={formik.handleChange}
                   />
                 </Form.Group>
                 <Form.Group className="mb-4" controlId="formBasicLastName">
-                  <Form.Label>Last Name</Form.Label>
+                  <Form.Label>Apellido</Form.Label>
                   <Form.Control
                     type="text"
                     name="lastName"
-                    placeholder="Enter last name"
+                    placeholder="Ecribe tu apellido"
                     onChange={formik.handleChange}
                   />
                 </Form.Group>
@@ -77,9 +77,9 @@ function FormComp() {
                   <Form.Label>Comentanos tus dudas o problemas!</Form.Label>
                   <Form.Control
                     as="textarea"
-                    style={{ height: "245px" }}
+                    style={{ height: "245px", maxHeight: "300px", minHeight: "220px"}}
                     name="comentario"
-                    placeholder="Enter last name"
+                    placeholder="Escribe tu duda o pregunta aqui"
                     onChange={formik.handleChange}
                   />
                 </Form.Group>
@@ -87,7 +87,7 @@ function FormComp() {
                   <Form.Check
                     type="checkbox"
                     name="check"
-                    label="Check me out"
+                    label="Enviar la respuesta al mail"
                     onChange={formik.handleChange}
                   />
                 </Form.Group>
@@ -95,7 +95,7 @@ function FormComp() {
             </div>
             <div className="d-flex flex-row-reverse">
               <Button variant="primary" type="submit">
-                Submit
+                Enviar
               </Button>
             </div>
           </div>

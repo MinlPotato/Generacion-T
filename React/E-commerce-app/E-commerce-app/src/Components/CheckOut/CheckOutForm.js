@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import ShopContext from "../ContextT/ShopContext";
-import { Button } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+
 
 function CheckOutForm() {
   const context = useContext(ShopContext);
@@ -16,7 +15,7 @@ function CheckOutForm() {
       <div className="row g-5">
         <div className="col-md-5 col-lg-4 order-md-last">
           <h4 className="d-flex justify-content-between align-items-center mb-3">
-            <span className="text-primary">Your cart</span>
+            <span className="text-primary">Tu carrito</span>
             <span className="badge bg-primary rounded-pill">
               {" "}
               {context.cart.length}{" "}
@@ -51,19 +50,18 @@ function CheckOutForm() {
           </ul>
         </div>
         <div className="col-md-7 col-lg-8">
-          <h4 className="mb-3">Billing address</h4>
+          <h4 className="mb-3">Datos</h4>
           <form className="needs-validation" novalidate>
             <div className="row g-3">
               <div className="col-sm-6">
                 <label for="firstName" className="form-label">
-                  First name
+                  Nombre
                 </label>
                 <input
                   type="text"
                   className="form-control"
                   id="firstName"
                   placeholder=""
-                  value=""
                   required
                 ></input>
                 <div className="invalid-feedback">
@@ -73,14 +71,13 @@ function CheckOutForm() {
 
               <div className="col-sm-6">
                 <label for="lastName" className="form-label">
-                  Last name
+                  Apellido
                 </label>
                 <input
                   type="text"
                   className="form-control"
                   id="lastName"
                   placeholder=""
-                  value=""
                   required
                 ></input>
                 <div className="invalid-feedback">
@@ -89,33 +86,15 @@ function CheckOutForm() {
               </div>
 
               <div className="col-12">
-                <label for="username" className="form-label">
-                  Username
-                </label>
-                <div className="input-group has-validation">
-                  <span className="input-group-text">@</span>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="username"
-                    placeholder="Username"
-                    required
-                  ></input>
-                  <div className="invalid-feedback">
-                    Your username is required.
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-12">
                 <label for="email" className="form-label">
-                  Email <span className="text-muted">(Optional)</span>
+                  Email
                 </label>
                 <input
                   type="email"
                   className="form-control"
                   id="email"
                   placeholder="you@example.com"
+                  required
                 ></input>
                 <div className="invalid-feedback">
                   Please enter a valid email address for shipping updates.
@@ -124,7 +103,7 @@ function CheckOutForm() {
 
               <div className="col-12">
                 <label for="address" className="form-label">
-                  Address
+                  Dirección
                 </label>
                 <input
                   type="text"
@@ -140,23 +119,23 @@ function CheckOutForm() {
 
               <div className="col-12">
                 <label for="address2" className="form-label">
-                  Address 2 <span className="text-muted">(Optional)</span>
+                  Dirección 2 <span className="text-muted">(Opcional)</span>
                 </label>
                 <input
                   type="text"
                   className="form-control"
                   id="address2"
-                  placeholder="Apartment or suite"
+                  placeholder="Apartmamento"
                 ></input>
               </div>
 
               <div className="col-md-5">
                 <label for="country" className="form-label">
-                  Country
+                  Pais
                 </label>
                 <select className="form-select" id="country" required>
-                  <option value="">Choose...</option>
-                  <option>United States</option>
+                  <option value="">Elige...</option>
+                  <option>Argentina</option>
                 </select>
                 <div className="invalid-feedback">
                   Please select a valid country.
@@ -165,11 +144,11 @@ function CheckOutForm() {
 
               <div className="col-md-4">
                 <label for="state" className="form-label">
-                  State
+                  Provincia
                 </label>
                 <select className="form-select" id="state" required>
-                  <option value="">Choose...</option>
-                  <option>California</option>
+                  <option value="">Elige...</option>
+                  <option>Buenos Aires</option>
                 </select>
                 <div className="invalid-feedback">
                   Please provide a valid state.
@@ -200,7 +179,7 @@ function CheckOutForm() {
                 id="same-address"
               ></input>
               <label className="form-check-label" for="same-address">
-                Shipping address is the same as my billing address
+                Mi dirección de envío es la misma a mi dirección de facturación
               </label>
             </div>
 
@@ -211,13 +190,13 @@ function CheckOutForm() {
                 id="save-info"
               ></input>
               <label className="form-check-label" for="save-info">
-                Save this information for next time
+                Guarda esta inforamcion para la siguiente vez
               </label>
             </div>
 
             <hr className="my-4"></hr>
 
-            <h4 className="mb-3">Payment</h4>
+            <h4 className="mb-3">Pago</h4>
 
             <div className="my-3">
               <div className="form-check">
@@ -230,7 +209,7 @@ function CheckOutForm() {
                   required
                 ></input>
                 <label className="form-check-label" for="credit">
-                  Credit card
+                  Tarjeta de credito
                 </label>
               </div>
               <div className="form-check">
@@ -242,7 +221,7 @@ function CheckOutForm() {
                   required
                 ></input>
                 <label className="form-check-label" for="debit">
-                  Debit card
+                  Tarjeta de debito
                 </label>
               </div>
               <div className="form-check">
@@ -254,7 +233,7 @@ function CheckOutForm() {
                   required
                 ></input>
                 <label className="form-check-label" for="paypal">
-                  PayPal
+                  MercadoPago
                 </label>
               </div>
             </div>
@@ -262,7 +241,7 @@ function CheckOutForm() {
             <div className="row gy-3">
               <div className="col-md-6">
                 <label for="cc-name" className="form-label">
-                  Name on card
+                  Nombre de la tarjeta
                 </label>
                 <input
                   type="text"
@@ -271,15 +250,13 @@ function CheckOutForm() {
                   placeholder=""
                   required
                 ></input>
-                <small className="text-muted">
-                  Full name as displayed on card
-                </small>
+                <small className="text-muted">Nombre completo</small>
                 <div className="invalid-feedback">Name on card is required</div>
               </div>
 
               <div className="col-md-6">
                 <label for="cc-number" className="form-label">
-                  Credit card number
+                  Numero de la tarjeta
                 </label>
                 <input
                   type="text"
@@ -295,7 +272,7 @@ function CheckOutForm() {
 
               <div className="col-md-3">
                 <label for="cc-expiration" className="form-label">
-                  Expiration
+                  Expiración
                 </label>
                 <input
                   type="text"
@@ -324,9 +301,24 @@ function CheckOutForm() {
 
             <hr className="my-4"></hr>
 
-            <button className="w-100 btn btn-primary btn-lg" type="submit">
-              Continue to checkout
-            </button>
+            {context.cart.length == 0 ? (
+              <>
+                <button
+                  className="w-100 btn btn-primary btn-lg"
+                  disabled
+                  type="submit"
+                >
+                  Seguir con el CheckOut
+                </button>
+                <small className="text-muted">
+                  No tiene nada en su carrito
+                </small>
+              </>
+            ) : (
+              <button className="w-100 btn btn-primary btn-lg" type="submit">
+                Seguir con el CheckOut
+              </button>
+            )}
           </form>
         </div>
       </div>
